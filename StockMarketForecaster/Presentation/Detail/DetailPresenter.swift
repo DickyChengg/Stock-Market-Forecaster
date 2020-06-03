@@ -59,19 +59,13 @@ extension DetailPresenter {
     
     func predict() {
         // Convert Entity to MLModelInput
-        let inputs: [BBCAInput] = state.actualData.map { item in
-            BBCAInput(
-                Open: item.open,
-                High: item.high,
-                Low: item.low,
-                Volume: item.volume,
-                Timestamp: item.timestamp
-            )
+        let inputs: [StockMarketModelInput] = state.actualData.map { item in
+            StockMarketModelInput(data: item.json)
         }
         
         // Start Predicting
         do {
-            state.predictedData = try interactor.predictions(data: inputs)
+            state.predictedData = try interactor.predictions(ticker: state.ticker, data: inputs)
             render()
         } catch {
             view?.presentError(message: error.localizedDescription)

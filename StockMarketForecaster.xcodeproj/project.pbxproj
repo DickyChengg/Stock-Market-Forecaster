@@ -1,0 +1,645 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FB226E465720D19E5BFD0F7 /* Pods_StockMarketForecaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1020503D0752C770D435A5 /* Pods_StockMarketForecaster.framework */; };
+		8E2F227E2483A90800EEDC89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F227D2483A90800EEDC89 /* AppDelegate.swift */; };
+		8E2F22802483A90800EEDC89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F227F2483A90800EEDC89 /* SceneDelegate.swift */; };
+		8E2F22822483A90800EEDC89 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F22812483A90800EEDC89 /* MasterViewController.swift */; };
+		8E2F22842483A90800EEDC89 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F22832483A90800EEDC89 /* DetailViewController.swift */; };
+		8E2F22872483A90800EEDC89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F22852483A90800EEDC89 /* Main.storyboard */; };
+		8E2F22892483A90900EEDC89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F22882483A90900EEDC89 /* Assets.xcassets */; };
+		8E2F228C2483A90900EEDC89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F228A2483A90900EEDC89 /* LaunchScreen.storyboard */; };
+		8E3D94BF248591BA00D72D8B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D94BE248591BA00D72D8B /* String.swift */; };
+		8E3D94C12485988900D72D8B /* StockMarketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D94C02485988900D72D8B /* StockMarketInteractor.swift */; };
+		8E7327312487B2E90027CA71 /* BBCA.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8E7327302487B2E90027CA71 /* BBCA.mlmodel */; };
+		8E7327332487B4790027CA71 /* BBCA.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8E7327322487B4790027CA71 /* BBCA.csv */; };
+		8E7327342487B70F0027CA71 /* DynamicMLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247A7248511DE002946E6 /* DynamicMLModel.swift */; };
+		8E7327352487B81B0027CA71 /* StockMarketModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247B224851343002946E6 /* StockMarketModelInput.swift */; };
+		8E7327362487B81D0027CA71 /* StockMarketModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247B4248514F8002946E6 /* StockMarketModelOutput.swift */; };
+		8EA5968124856FAD00F0AA8E /* Array+NSCopying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5968024856FAD00F0AA8E /* Array+NSCopying.swift */; };
+		8EA5968324857C1700F0AA8E /* DetailChartGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5968224857C1700F0AA8E /* DetailChartGenerator.swift */; };
+		8EAC87C724867E3900D91F4F /* AAPL.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC87C624867E3900D91F4F /* AAPL.mlmodel */; };
+		8EAC87C92486822B00D91F4F /* DynamicMLModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247A9248511F5002946E6 /* DynamicMLModelInput.swift */; };
+		8EAC87CA2486822E00D91F4F /* DynamicMLModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247AB2485121A002946E6 /* DynamicMLModelOutput.swift */; };
+		8EC2479024845585002946E6 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2478F24845585002946E6 /* DetailPresenter.swift */; };
+		8EC24792248455D7002946E6 /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC24791248455D7002946E6 /* DetailState.swift */; };
+		8EC247942484F26F002946E6 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247932484F26F002946E6 /* Optional.swift */; };
+		8EC2479724850DD9002946E6 /* AMZN.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2479624850DD9002946E6 /* AMZN.mlmodel */; };
+		8EC2479B24850DE7002946E6 /* BABA.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2479A24850DE7002946E6 /* BABA.mlmodel */; };
+		8EC2479D24850DF0002946E6 /* FB.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2479C24850DF0002946E6 /* FB.mlmodel */; };
+		8EC2479F24850DFB002946E6 /* GOOG.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2479E24850DFB002946E6 /* GOOG.mlmodel */; };
+		8EC247A124850E02002946E6 /* IBM.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247A024850E02002946E6 /* IBM.mlmodel */; };
+		8EC247A324850E0D002946E6 /* INTC.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247A224850E0C002946E6 /* INTC.mlmodel */; };
+		8EC247A524850E12002946E6 /* MSFT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247A424850E12002946E6 /* MSFT.mlmodel */; };
+		8EC247AE24851257002946E6 /* DynamicMLModelError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247AD24851257002946E6 /* DynamicMLModelError.swift */; };
+		8EC247BC24851FCD002946E6 /* StockMarketLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247BB24851FCD002946E6 /* StockMarketLocal.swift */; };
+		8EC247BE24851FDC002946E6 /* StockMarketEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC247BD24851FDC002946E6 /* StockMarketEntity.swift */; };
+		8EC247CA24852190002946E6 /* MSFT.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C224852190002946E6 /* MSFT.csv */; };
+		8EC247CB24852190002946E6 /* INTC.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C324852190002946E6 /* INTC.csv */; };
+		8EC247CC24852190002946E6 /* AMZN.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C424852190002946E6 /* AMZN.csv */; };
+		8EC247CD24852190002946E6 /* IBM.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C524852190002946E6 /* IBM.csv */; };
+		8EC247CE24852190002946E6 /* AAPL.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C624852190002946E6 /* AAPL.csv */; };
+		8EC247CF24852190002946E6 /* BABA.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C724852190002946E6 /* BABA.csv */; };
+		8EC247D024852190002946E6 /* GOOG.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C824852190002946E6 /* GOOG.csv */; };
+		8EC247D124852190002946E6 /* FB.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8EC247C924852190002946E6 /* FB.csv */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C1020503D0752C770D435A5 /* Pods_StockMarketForecaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockMarketForecaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2F227A2483A90800EEDC89 /* StockMarketForecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockMarketForecaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2F227D2483A90800EEDC89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E2F227F2483A90800EEDC89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8E2F22812483A90800EEDC89 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		8E2F22832483A90800EEDC89 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8E2F22862483A90800EEDC89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E2F22882483A90900EEDC89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E2F228B2483A90900EEDC89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E2F228D2483A90900EEDC89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E3D94BE248591BA00D72D8B /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8E3D94C02485988900D72D8B /* StockMarketInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockMarketInteractor.swift; sourceTree = "<group>"; };
+		8E7327302487B2E90027CA71 /* BBCA.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BBCA.mlmodel; sourceTree = "<group>"; };
+		8E7327322487B4790027CA71 /* BBCA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BBCA.csv; sourceTree = "<group>"; };
+		8EA5968024856FAD00F0AA8E /* Array+NSCopying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+NSCopying.swift"; sourceTree = "<group>"; };
+		8EA5968224857C1700F0AA8E /* DetailChartGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChartGenerator.swift; sourceTree = "<group>"; };
+		8EAC87C624867E3900D91F4F /* AAPL.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AAPL.mlmodel; sourceTree = "<group>"; };
+		8EC2478F24845585002946E6 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		8EC24791248455D7002946E6 /* DetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
+		8EC247932484F26F002946E6 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		8EC2479624850DD9002946E6 /* AMZN.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AMZN.mlmodel; sourceTree = "<group>"; };
+		8EC2479A24850DE7002946E6 /* BABA.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BABA.mlmodel; sourceTree = "<group>"; };
+		8EC2479C24850DF0002946E6 /* FB.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FB.mlmodel; sourceTree = "<group>"; };
+		8EC2479E24850DFB002946E6 /* GOOG.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GOOG.mlmodel; sourceTree = "<group>"; };
+		8EC247A024850E02002946E6 /* IBM.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IBM.mlmodel; sourceTree = "<group>"; };
+		8EC247A224850E0C002946E6 /* INTC.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = INTC.mlmodel; sourceTree = "<group>"; };
+		8EC247A424850E12002946E6 /* MSFT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MSFT.mlmodel; sourceTree = "<group>"; };
+		8EC247A7248511DE002946E6 /* DynamicMLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMLModel.swift; sourceTree = "<group>"; };
+		8EC247A9248511F5002946E6 /* DynamicMLModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMLModelInput.swift; sourceTree = "<group>"; };
+		8EC247AB2485121A002946E6 /* DynamicMLModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMLModelOutput.swift; sourceTree = "<group>"; };
+		8EC247AD24851257002946E6 /* DynamicMLModelError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMLModelError.swift; sourceTree = "<group>"; };
+		8EC247B224851343002946E6 /* StockMarketModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketModelInput.swift; sourceTree = "<group>"; };
+		8EC247B4248514F8002946E6 /* StockMarketModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketModelOutput.swift; sourceTree = "<group>"; };
+		8EC247BB24851FCD002946E6 /* StockMarketLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketLocal.swift; sourceTree = "<group>"; };
+		8EC247BD24851FDC002946E6 /* StockMarketEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockMarketEntity.swift; sourceTree = "<group>"; };
+		8EC247C224852190002946E6 /* MSFT.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MSFT.csv; sourceTree = "<group>"; };
+		8EC247C324852190002946E6 /* INTC.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INTC.csv; sourceTree = "<group>"; };
+		8EC247C424852190002946E6 /* AMZN.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AMZN.csv; sourceTree = "<group>"; };
+		8EC247C524852190002946E6 /* IBM.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IBM.csv; sourceTree = "<group>"; };
+		8EC247C624852190002946E6 /* AAPL.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AAPL.csv; sourceTree = "<group>"; };
+		8EC247C724852190002946E6 /* BABA.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BABA.csv; sourceTree = "<group>"; };
+		8EC247C824852190002946E6 /* GOOG.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GOOG.csv; sourceTree = "<group>"; };
+		8EC247C924852190002946E6 /* FB.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FB.csv; sourceTree = "<group>"; };
+		8FEFCBDE3B14E5846B9F4FDA /* Pods-StockMarketForecaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockMarketForecaster.release.xcconfig"; path = "Target Support Files/Pods-StockMarketForecaster/Pods-StockMarketForecaster.release.xcconfig"; sourceTree = "<group>"; };
+		97AD363BCB04DCB7DB8F2266 /* Pods-StockMarketForecaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockMarketForecaster.debug.xcconfig"; path = "Target Support Files/Pods-StockMarketForecaster/Pods-StockMarketForecaster.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E2F22772483A90800EEDC89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FB226E465720D19E5BFD0F7 /* Pods_StockMarketForecaster.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E2F22712483A90800EEDC89 = {
+			isa = PBXGroup;
+			children = (
+				8E2F227C2483A90800EEDC89 /* StockMarketForecaster */,
+				8E2F227B2483A90800EEDC89 /* Products */,
+				A0C93BE01DE2D6B8986C69A5 /* Pods */,
+				EE94B3C9108D32B99ADB5F95 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E2F227B2483A90800EEDC89 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E2F227A2483A90800EEDC89 /* StockMarketForecaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E2F227C2483A90800EEDC89 /* StockMarketForecaster */ = {
+			isa = PBXGroup;
+			children = (
+				8EC2478924845339002946E6 /* Base */,
+				8EC247B924851FAE002946E6 /* Data */,
+				8EC2478B24845351002946E6 /* Domain */,
+				8EC2478A24845340002946E6 /* Presentation */,
+			);
+			path = StockMarketForecaster;
+			sourceTree = "<group>";
+		};
+		8EC2478924845339002946E6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8E2F228D2483A90900EEDC89 /* Info.plist */,
+				8E2F227D2483A90800EEDC89 /* AppDelegate.swift */,
+				8EA5968024856FAD00F0AA8E /* Array+NSCopying.swift */,
+				8EC247932484F26F002946E6 /* Optional.swift */,
+				8E2F227F2483A90800EEDC89 /* SceneDelegate.swift */,
+				8E3D94BE248591BA00D72D8B /* String.swift */,
+				8E2F22882483A90900EEDC89 /* Assets.xcassets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8EC2478A24845340002946E6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8EC2478D24845362002946E6 /* Detail */,
+				8EC2478C2484535C002946E6 /* Master */,
+				8EC2478E24845375002946E6 /* Storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8EC2478B24845351002946E6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8EC247BD24851FDC002946E6 /* StockMarketEntity.swift */,
+				8E3D94C02485988900D72D8B /* StockMarketInteractor.swift */,
+				8EC247A6248511CF002946E6 /* DynamicMLModel */,
+				8EC2479524850DCF002946E6 /* MLModel */,
+				8EC247AF248512EA002946E6 /* StockMarketModel */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8EC2478C2484535C002946E6 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				8E2F22812483A90800EEDC89 /* MasterViewController.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		8EC2478D24845362002946E6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8EA5968224857C1700F0AA8E /* DetailChartGenerator.swift */,
+				8EC2478F24845585002946E6 /* DetailPresenter.swift */,
+				8EC24791248455D7002946E6 /* DetailState.swift */,
+				8E2F22832483A90800EEDC89 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8EC2478E24845375002946E6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8E2F228A2483A90900EEDC89 /* LaunchScreen.storyboard */,
+				8E2F22852483A90800EEDC89 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8EC2479524850DCF002946E6 /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				8EAC87C624867E3900D91F4F /* AAPL.mlmodel */,
+				8EC2479624850DD9002946E6 /* AMZN.mlmodel */,
+				8EC2479A24850DE7002946E6 /* BABA.mlmodel */,
+				8E7327302487B2E90027CA71 /* BBCA.mlmodel */,
+				8EC2479C24850DF0002946E6 /* FB.mlmodel */,
+				8EC2479E24850DFB002946E6 /* GOOG.mlmodel */,
+				8EC247A024850E02002946E6 /* IBM.mlmodel */,
+				8EC247A224850E0C002946E6 /* INTC.mlmodel */,
+				8EC247A424850E12002946E6 /* MSFT.mlmodel */,
+			);
+			path = MLModel;
+			sourceTree = "<group>";
+		};
+		8EC247A6248511CF002946E6 /* DynamicMLModel */ = {
+			isa = PBXGroup;
+			children = (
+				8EC247A7248511DE002946E6 /* DynamicMLModel.swift */,
+				8EC247AD24851257002946E6 /* DynamicMLModelError.swift */,
+				8EC247A9248511F5002946E6 /* DynamicMLModelInput.swift */,
+				8EC247AB2485121A002946E6 /* DynamicMLModelOutput.swift */,
+			);
+			path = DynamicMLModel;
+			sourceTree = "<group>";
+		};
+		8EC247AF248512EA002946E6 /* StockMarketModel */ = {
+			isa = PBXGroup;
+			children = (
+				8EC247B224851343002946E6 /* StockMarketModelInput.swift */,
+				8EC247B4248514F8002946E6 /* StockMarketModelOutput.swift */,
+			);
+			path = StockMarketModel;
+			sourceTree = "<group>";
+		};
+		8EC247B924851FAE002946E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8EC247BA24851FBD002946E6 /* StockMarket */,
+				8EC247C124852190002946E6 /* StockMarketHistory */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8EC247BA24851FBD002946E6 /* StockMarket */ = {
+			isa = PBXGroup;
+			children = (
+				8EC247BB24851FCD002946E6 /* StockMarketLocal.swift */,
+			);
+			path = StockMarket;
+			sourceTree = "<group>";
+		};
+		8EC247C124852190002946E6 /* StockMarketHistory */ = {
+			isa = PBXGroup;
+			children = (
+				8EC247C624852190002946E6 /* AAPL.csv */,
+				8EC247C424852190002946E6 /* AMZN.csv */,
+				8EC247C724852190002946E6 /* BABA.csv */,
+				8E7327322487B4790027CA71 /* BBCA.csv */,
+				8EC247C924852190002946E6 /* FB.csv */,
+				8EC247C824852190002946E6 /* GOOG.csv */,
+				8EC247C524852190002946E6 /* IBM.csv */,
+				8EC247C324852190002946E6 /* INTC.csv */,
+				8EC247C224852190002946E6 /* MSFT.csv */,
+			);
+			path = StockMarketHistory;
+			sourceTree = "<group>";
+		};
+		A0C93BE01DE2D6B8986C69A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97AD363BCB04DCB7DB8F2266 /* Pods-StockMarketForecaster.debug.xcconfig */,
+				8FEFCBDE3B14E5846B9F4FDA /* Pods-StockMarketForecaster.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE94B3C9108D32B99ADB5F95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C1020503D0752C770D435A5 /* Pods_StockMarketForecaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E2F22792483A90800EEDC89 /* StockMarketForecaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E2F22902483A90900EEDC89 /* Build configuration list for PBXNativeTarget "StockMarketForecaster" */;
+			buildPhases = (
+				A36F7BCD4215162654E06E40 /* [CP] Check Pods Manifest.lock */,
+				8E2F22762483A90800EEDC89 /* Sources */,
+				8E2F22772483A90800EEDC89 /* Frameworks */,
+				8E2F22782483A90800EEDC89 /* Resources */,
+				837F95FC8FA2AEFF5BBA082D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StockMarketForecaster;
+			productName = StockMarketForecaster;
+			productReference = 8E2F227A2483A90800EEDC89 /* StockMarketForecaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E2F22722483A90800EEDC89 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Organization Name";
+				TargetAttributes = {
+					8E2F22792483A90800EEDC89 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 8E2F22752483A90800EEDC89 /* Build configuration list for PBXProject "StockMarketForecaster" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E2F22712483A90800EEDC89;
+			productRefGroup = 8E2F227B2483A90800EEDC89 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E2F22792483A90800EEDC89 /* StockMarketForecaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E2F22782483A90800EEDC89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EC247D024852190002946E6 /* GOOG.csv in Resources */,
+				8EC247CA24852190002946E6 /* MSFT.csv in Resources */,
+				8E2F228C2483A90900EEDC89 /* LaunchScreen.storyboard in Resources */,
+				8E2F22892483A90900EEDC89 /* Assets.xcassets in Resources */,
+				8E2F22872483A90800EEDC89 /* Main.storyboard in Resources */,
+				8EC247CE24852190002946E6 /* AAPL.csv in Resources */,
+				8E7327332487B4790027CA71 /* BBCA.csv in Resources */,
+				8EC247CC24852190002946E6 /* AMZN.csv in Resources */,
+				8EC247CF24852190002946E6 /* BABA.csv in Resources */,
+				8EC247D124852190002946E6 /* FB.csv in Resources */,
+				8EC247CD24852190002946E6 /* IBM.csv in Resources */,
+				8EC247CB24852190002946E6 /* INTC.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		837F95FC8FA2AEFF5BBA082D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockMarketForecaster/Pods-StockMarketForecaster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockMarketForecaster/Pods-StockMarketForecaster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockMarketForecaster/Pods-StockMarketForecaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A36F7BCD4215162654E06E40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockMarketForecaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E2F22762483A90800EEDC89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E7327312487B2E90027CA71 /* BBCA.mlmodel in Sources */,
+				8EAC87CA2486822E00D91F4F /* DynamicMLModelOutput.swift in Sources */,
+				8E7327352487B81B0027CA71 /* StockMarketModelInput.swift in Sources */,
+				8EC2479F24850DFB002946E6 /* GOOG.mlmodel in Sources */,
+				8EC24792248455D7002946E6 /* DetailState.swift in Sources */,
+				8E7327342487B70F0027CA71 /* DynamicMLModel.swift in Sources */,
+				8E3D94BF248591BA00D72D8B /* String.swift in Sources */,
+				8EA5968124856FAD00F0AA8E /* Array+NSCopying.swift in Sources */,
+				8EAC87C724867E3900D91F4F /* AAPL.mlmodel in Sources */,
+				8EA5968324857C1700F0AA8E /* DetailChartGenerator.swift in Sources */,
+				8EC247A324850E0D002946E6 /* INTC.mlmodel in Sources */,
+				8EC247A524850E12002946E6 /* MSFT.mlmodel in Sources */,
+				8E2F227E2483A90800EEDC89 /* AppDelegate.swift in Sources */,
+				8EC2479724850DD9002946E6 /* AMZN.mlmodel in Sources */,
+				8E2F22802483A90800EEDC89 /* SceneDelegate.swift in Sources */,
+				8E3D94C12485988900D72D8B /* StockMarketInteractor.swift in Sources */,
+				8EC247942484F26F002946E6 /* Optional.swift in Sources */,
+				8E2F22822483A90800EEDC89 /* MasterViewController.swift in Sources */,
+				8EC247AE24851257002946E6 /* DynamicMLModelError.swift in Sources */,
+				8EC247A124850E02002946E6 /* IBM.mlmodel in Sources */,
+				8EC247BE24851FDC002946E6 /* StockMarketEntity.swift in Sources */,
+				8E7327362487B81D0027CA71 /* StockMarketModelOutput.swift in Sources */,
+				8EC2479024845585002946E6 /* DetailPresenter.swift in Sources */,
+				8EAC87C92486822B00D91F4F /* DynamicMLModelInput.swift in Sources */,
+				8EC2479D24850DF0002946E6 /* FB.mlmodel in Sources */,
+				8EC2479B24850DE7002946E6 /* BABA.mlmodel in Sources */,
+				8EC247BC24851FCD002946E6 /* StockMarketLocal.swift in Sources */,
+				8E2F22842483A90800EEDC89 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8E2F22852483A90800EEDC89 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E2F22862483A90800EEDC89 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E2F228A2483A90900EEDC89 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E2F228B2483A90900EEDC89 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E2F228E2483A90900EEDC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E2F228F2483A90900EEDC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E2F22912483A90900EEDC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97AD363BCB04DCB7DB8F2266 /* Pods-StockMarketForecaster.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2465U6XMD2;
+				INFOPLIST_FILE = StockMarketForecaster/Base/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicky.StockMarketForecaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E2F22922483A90900EEDC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FEFCBDE3B14E5846B9F4FDA /* Pods-StockMarketForecaster.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2465U6XMD2;
+				INFOPLIST_FILE = StockMarketForecaster/Base/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dicky.StockMarketForecaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E2F22752483A90800EEDC89 /* Build configuration list for PBXProject "StockMarketForecaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E2F228E2483A90900EEDC89 /* Debug */,
+				8E2F228F2483A90900EEDC89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E2F22902483A90900EEDC89 /* Build configuration list for PBXNativeTarget "StockMarketForecaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E2F22912483A90900EEDC89 /* Debug */,
+				8E2F22922483A90900EEDC89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E2F22722483A90800EEDC89 /* Project object */;
+}

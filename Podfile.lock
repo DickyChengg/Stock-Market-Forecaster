@@ -1,0 +1,30 @@
+PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
+  - SwiftCSV (0.5.6)
+  - SwiftDate (6.1.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Charts (= 3.5.0)
+  - SwiftCSV (= 0.5.6)
+  - SwiftDate (= 6.1.0)
+  - SwiftyJSON (= 5.0)
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - SwiftCSV
+    - SwiftDate
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  SwiftCSV: efb4a15dd7f2f1212b3d6986f97a3369ff6c5100
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: fed32182fe1549e1aff2291e5420b1f2ab21ffc7
+
+COCOAPODS: 1.8.4
